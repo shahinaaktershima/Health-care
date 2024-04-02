@@ -12,6 +12,7 @@ import Login from './Login/Login';
 import Register from './Login/Register';
 import Alluser from './dashboard/Alluser';
 import Usersetup from './Usersetup';
+import Doctor from './doctor/Doctor';
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
     {
       path:'/user',
       element:<Usersetup></Usersetup>
+    },
+    {
+      path:'/doctor',
+      element:<Doctor></Doctor>
     }
     // {
     //   Path:'/user',
