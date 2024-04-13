@@ -10,7 +10,7 @@ const Doctor = () => {
         .then(data=>setData(data))
     },[])
     return (
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid grid-cols-4 gap-4 mb-10 mt-1 container mx-auto">
             {
                 datas.map(item=><Doc key={item.id} item={item}></Doc>)
             }

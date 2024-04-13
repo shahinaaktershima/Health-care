@@ -10,9 +10,13 @@ import Home from './Home/Home';
 import AuthProvider from './Login/AuthProvider';
 import Login from './Login/Login';
 import Register from './Login/Register';
-import Alluser from './dashboard/Alluser';
-import Usersetup from './Usersetup';
 import Doctor from './doctor/Doctor';
+import Dashboard from './Dashboard';
+import Usersetup from './Usersetup';
+import Appointment from './doctor/Appointment';
+import AllAppointment from './doctor/AllAppointment';
+
+
 
 const router = createBrowserRouter([
   {
@@ -29,21 +33,33 @@ const router = createBrowserRouter([
       path:'/register',
       element:<Register></Register>
     },
-    {
-      path:'/user',
-      element:<Usersetup></Usersetup>
-    },
+   
     {
       path:'/doctor',
       element:<Doctor></Doctor>
     }
-    // {
-    //   Path:'/user',
-    //   element:<Alluser></Alluser>
-    // }
+  ,{
+    path:'/addAppointment',
+    element:<Appointment></Appointment>
+  }
   
   ]
   },
+  {
+    path:'/dashboard',
+    element:<Dashboard></Dashboard>,
+    children:[{
+      path:"/dashboard",
+      element:<Usersetup></Usersetup>
+    },
+    {
+      path:'/dashboard/appointments',
+      element:<AllAppointment></AllAppointment>
+    }
+  
+  ]
+  }
+  
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
