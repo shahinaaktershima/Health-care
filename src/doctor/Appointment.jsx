@@ -1,14 +1,16 @@
 import { useForm } from "react-hook-form";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLoaderData, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 const Appointment = () => {
-    const { register, handleSubmit ,reset } = useForm();
+  const data=useLoaderData();
+  console.log(data);
+    const { register, handleSubmit  } = useForm();
     const location=useLocation();
     const navigate=useNavigate();
     
     const onSubmit =async (data) => {console.log(data)
     
-      fetch('http://localhost:5000/product',{
+      fetch('https://health-care-server-wine.vercel.app/product',{
         method:'POST',
         headers:{
             'content-type':'application/json'
@@ -36,9 +38,10 @@ const Appointment = () => {
         <h2 className="text-3xl font-bold">Add Appointment</h2>
          <form onSubmit={handleSubmit(onSubmit)}>
     
+    <div className="flex gap-3">
     <div className="form-control w-full my-6">
 <label className="label">
-  <span className="label-text"> Name</span>
+  <span className="label-text">Patient Name</span>
  
 </label>
 <input
@@ -46,6 +49,17 @@ const Appointment = () => {
 type="text" placeholder="Your name" className="input input-bordered w-full " />
 
 </div>
+    <div className="form-control w-full my-6">
+<label className="label">
+  <span className="label-text">Doctor Name</span>
+ 
+</label>
+<input
+ {...register("docname")}
+type="text" defaultValue={data.name} placeholder=" name" className="input input-bordered w-full " />
+
+</div>
+    </div>
    <div className="flex gap-10">
       {/* category */}
       <div className="form-control w-full my-6">

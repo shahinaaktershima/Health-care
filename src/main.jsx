@@ -39,8 +39,9 @@ const router = createBrowserRouter([
       element:<Doctor></Doctor>
     }
   ,{
-    path:'/addAppointment',
-    element:<Appointment></Appointment>
+    path:'/addAppointment/:id',
+    element:<Appointment></Appointment>,
+    loader:({params})=>fetch(`https://health-care-server-wine.vercel.app/Doctor/${params.id}`)
   }
   
   ]

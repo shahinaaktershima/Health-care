@@ -20,7 +20,7 @@ const Navbar = () => {
     <li><Link to='/'>Home</Link></li>
     <li><Link to='/doctor'>Doctors</Link></li>
     {
-      userInfo.role === "admin"&&<li><Link className=" btn-sm" to="/dashboard">Dashboard</Link></li>
+      userInfo.role === "admin"&&<li><Link className=" text-white text-2xl btn-sm" to="/dashboard">Dashboard</Link></li>
      
       }
     
@@ -34,14 +34,14 @@ const Navbar = () => {
   <div className="navbar-start">
     <div className="dropdown">
       
-      <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+      <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow text-2xl text-white rounded-box w-52">
         {navlinks}
       </ul>
     </div>
     <a className="btn btn-ghost text-xl">Health Care</a>
   </div>
   <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1">
+    <ul className="menu menu-horizontal px-1 text-white text-2xl">
      {navlinks}
     </ul>
   </div>

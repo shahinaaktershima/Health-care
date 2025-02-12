@@ -92,11 +92,11 @@ const Login = () => {
      
 <div className="form-control mt-6">
                 
-                <input  className="btn btn-primary" type="submit" value="Login" />
+                <input  className="btn btn-primary bg-white" type="submit" value="Login" />
               </div>
     </form>
              <p className="my-2">Dont have an account to job space ? Please go to <Link className='text-blue-600 text-xl font-bold' to='/register'>Register</Link></p>
-              <button onClick={handleGoogle} className="btn my-2 bg-blue-600 text-white w-3/4 mx-auto">Log in with google</button>
+              <button onClick={handleGoogle} className="btn my-2  text-white w-3/4 mx-auto">Log in with google</button>
             </div>
             
           </div>

@@ -43,11 +43,11 @@ section:nth-child(even){
     padding-left: 1rem;
     border: var(--green);
     border-radius: .5rem;
+    background-color: #fff;
     box-shadow: var(--box-shadow);
     color: var(--green);
     cursor: pointer;
     font-size: 1.7rem;
-    background: #fff;
 
 }
 

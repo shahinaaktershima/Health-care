@@ -5,7 +5,7 @@ import Doc from "./Doc";
 const Doctor = () => {
     const [datas,setData]=useState([]);
     useEffect(()=>{
-        fetch('/fakedata.js')
+        fetch('https://health-care-server-wine.vercel.app/Doctor')
         .then(res=>res.json())
         .then(data=>setData(data))
     },[])

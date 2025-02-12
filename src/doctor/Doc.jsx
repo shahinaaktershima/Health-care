@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 
 const Doc = ({item}) => {
-    const {name,speciality,image,degree}=item;
+    const {_id,name,speciality,image,degree}=item;
     return (
         <div>
             <div className="card card-compact h-[400px] bg-base-100 shadow-xl">
@@ -12,7 +12,7 @@ const Doc = ({item}) => {
     <p>Speciality : {speciality}</p>
     <p>Degree : {degree}</p>
     <div className="card-actions justify-end">
-      <Link to='/addAppointment'><button className="btn btn-primary">Appointment</button></Link>
+      <Link to={`/addAppointment/${_id}`}><button className="btn btn-primary">Appointment</button></Link>
     </div>
   </div>
 </div>
